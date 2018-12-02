@@ -1,7 +1,7 @@
 const {defineFeature, loadFeature} = require('jest-cucumber');
 
 const feature = loadFeature('./features/rocket_launching.feature');
-const launchRocket = require('./index');
+const launchRocket = require('.');
 
 defineFeature(feature, scenario => {
     scenario('Launching a SpaceX rocket', ({given, then, when}) => {
